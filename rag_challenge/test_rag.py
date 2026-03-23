@@ -13,7 +13,9 @@ async def test_rag():
     queries = [
         "What is machine learning?",
         "Tell me about AI",
-        "Deep learning explanation"
+        "Deep learning explanation",
+        "Natural language processing",
+        "Artificial intelligence ethics"
     ]
 
     for query in queries:

@@ -1,17 +1,19 @@
-# RAG Architecture Implementation Challenge
+# RAG Architecture Implementation Challenge & Performance Dashboard
 
-This project implements a simple Retrieval-Augmented Generation (RAG) architecture to demonstrate common implementation challenges and solutions.
+This project implements a simple Retrieval-Augmented Generation (RAG) architecture with comprehensive performance monitoring and visualization.
 
 ## Features
 
 - **Multiple Data Sources**: Retrieves information from a local JSON file and a simulated remote API
 - **Asynchronous Operations**: Uses async/await to handle concurrent data retrieval with simulated delays
 - **Error Handling**: Implements robust error handling for failed data fetches with logging
-- **User Interface**: Provides a Streamlit-based web interface to interact with the RAG system
+- **Performance Metrics**: Automatically collects and stores performance data for each query
+- **Interactive Dashboard**: Visualize performance metrics with charts and filters
+- **Real-time Monitoring**: Track response times, error rates, and query statistics
 
 ## Architecture
 
-The RAG system consists of:
+The system consists of:
 
 1. **Data Sources** (`src/data_sources.py`):
    - Local source: JSON file with documents
@@ -21,17 +23,33 @@ The RAG system consists of:
    - Retrieves relevant documents from multiple sources
    - Combines and ranks retrieved information
    - Generates responses based on context
+   - Records performance metrics for each query
 
-3. **User Interface** (`app.py`):
-   - Streamlit web app for user interaction
-   - Displays responses, retrieved documents, and any errors
+3. **Metrics Collector** (`src/metrics.py`):
+   - Collects performance data (response time, error rate, etc.)
+   - Persists metrics to JSON file
+   - Provides filtering and summary statistics
+
+4. **Dashboard** (`app.py`):
+   - Streamlit web application with two tabs
+   - RAG query interface
+   - Performance metrics dashboard with charts and filters
+
+## Performance Metrics Collected
+
+- **Response Time**: Total time to process a query
+- **Success Rate**: Percentage of successful queries
+- **Documents Retrieved**: Number of relevant documents found
+- **Error Count**: Number of errors encountered per query
+- **Source Utilization**: Which data sources were queried
 
 ## Challenges Addressed
 
 - **Data Retrieval Delays**: Simulated with random sleep times in async operations
 - **Inconsistent Response Times**: Different sources have different delay characteristics
 - **Integration Difficulties**: Demonstrates combining data from heterogeneous sources
-- **Error Handling**: Graceful handling of network failures and data processing errors
+- **Performance Monitoring**: Tracks and visualizes system performance over time
+- **Error Scenarios**: Handles connection failures and data processing errors
 
 ## Installation
 
@@ -58,15 +76,25 @@ Run the Streamlit web application:
 streamlit run app.py
 ```
 
-This will start a web server. Open the provided URL in your browser to interact with the RAG system.
+This will start a web server. Open the provided URL in your browser to:
+- **RAG Query Interface**: Test the RAG system by entering queries
+- **Performance Dashboard**: Monitor system performance with interactive charts and metrics
+
+*Note: The web dashboard requires additional packages (plotly, pandas). Install them with `pip install plotly pandas` if not already installed.*
 
 ### Command Line Test
-Run the test script to see the RAG system in action:
+Run the test script to generate sample metrics data:
 ```bash
 python test_rag.py
 ```
 
-This will process several sample queries and display the results in the terminal.
+### Dashboard Demo
+Run the command-line dashboard demo to see metrics summary:
+```bash
+python dashboard_demo.py
+```
+
+This displays key performance indicators and recent query statistics.
 
 ## Simulated Challenges
 

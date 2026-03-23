@@ -1,0 +1,47 @@
+[
+  {
+    "timestamp": "2026-03-23T23:09:11.634620",
+    "query": "What is machine learning?",
+    "response_time": 1.5106470584869385,
+    "num_sources": 2,
+    "num_documents": 4,
+    "num_errors": 1,
+    "success": false
+  },
+  {
+    "timestamp": "2026-03-23T23:09:12.826917",
+    "query": "Tell me about AI",
+    "response_time": 1.1916117668151855,
+    "num_sources": 2,
+    "num_documents": 4,
+    "num_errors": 0,
+    "success": true
+  },
+  {
+    "timestamp": "2026-03-23T23:09:15.640877",
+    "query": "Deep learning explanation",
+    "response_time": 2.812623977661133,
+    "num_sources": 2,
+    "num_documents": 3,
+    "num_errors": 1,
+    "success": false
+  },
+  {
+    "timestamp": "2026-03-23T23:09:16.955098",
+    "query": "Natural language processing",
+    "response_time": 1.3122265338897705,
+    "num_sources": 2,
+    "num_documents": 4,
+    "num_errors": 0,
+    "success": true
+  },
+  {
+    "timestamp": "2026-03-23T23:09:19.939988",
+    "query": "Artificial intelligence ethics",
+    "response_time": 2.982560157775879,
+    "num_sources": 2,
+    "num_documents": 1,
+    "num_errors": 1,
+    "success": false
+  }
+]
