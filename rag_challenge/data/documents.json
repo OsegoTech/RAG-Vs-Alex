@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "title": "Introduction to AI",
+        "content": "Artificial Intelligence (AI) is a field of computer science that aims to create machines capable of intelligent behavior. It encompasses machine learning, natural language processing, and robotics."
+    },
+    {
+        "id": 2,
+        "title": "Machine Learning Basics",
+        "content": "Machine learning is a subset of AI that enables computers to learn from data without being explicitly programmed. It includes supervised, unsupervised, and reinforcement learning."
+    },
+    {
+        "id": 3,
+        "title": "Deep Learning",
+        "content": "Deep learning is a subset of machine learning that uses neural networks with multiple layers. It has revolutionized fields like image recognition and natural language processing."
+    },
+    {
+        "id": 4,
+        "title": "Natural Language Processing",
+        "content": "NLP is a branch of AI that focuses on the interaction between computers and human language. It includes tasks like text analysis, translation, and sentiment analysis."
+    }
+]
